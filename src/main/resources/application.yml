@@ -1,9 +1,12 @@
 logging:
     level:
         web: DEBUG
+        org.springframework.security: DEBUG
 server:
     port: 8080
 spring:
+    profiles:
+        active: default
     application:
         name: spring-boot-azka-cake-Project
     datasource:
@@ -21,3 +24,7 @@ spring:
             hibernate:
                 format-sql: true
         show-sql: true
+springdoc:
+    swagger-ui:
+        path: /azkacake/index.html
+        operationsSorter: method
