@@ -15,9 +15,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class AppUserService implements UserDetailsService {
 
+
     @Autowired
     private UserRepository userRepository;
 
+
+
+    /*
+    //ini contoh dependency injection dengan menggunakan Constructor Base
+    public AppUserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+     */
 
     @Autowired
     private BCryptPasswordEncoder encoder;
